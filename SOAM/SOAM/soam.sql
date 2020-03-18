@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-03-2020 a las 23:35:08
+-- Tiempo de generación: 18-03-2020 a las 03:51:21
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -53,12 +53,14 @@ CREATE TABLE `departamentos` (
 --
 
 INSERT INTO `departamentos` (`id_departamento`, `nombre`) VALUES
+(2, 'Administración'),
+(3, 'Pediatria'),
 (1, 'Recepción');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `paciente`
+-- Estructura de tabla para la tabla `pacientes`
 --
 
 CREATE TABLE `pacientes` (
@@ -89,6 +91,15 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `username`, `pass`, `correo_electronico`, `tipo`, `id_departamento`) VALUES
+(1, 'Fernando', 'Sigüenza', 'admin', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'fernando.siguenza.98@gmail.com', 1, 2),
+(2, 'Neris', 'Mendez', 'doctor', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'fffafafa', 2, 3),
+(3, 'Alonso', 'Cortes', 'recepcionista', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'fafafafaf', 3, 1);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -108,7 +119,7 @@ ALTER TABLE `departamentos`
   ADD UNIQUE KEY `nombre` (`nombre`);
 
 --
--- Indices de la tabla `paciente`
+-- Indices de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
   ADD PRIMARY KEY (`id_paciente`),
@@ -137,10 +148,10 @@ ALTER TABLE `consultas`
 -- AUTO_INCREMENT de la tabla `departamentos`
 --
 ALTER TABLE `departamentos`
-  MODIFY `id_departamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_departamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de la tabla `paciente`
+-- AUTO_INCREMENT de la tabla `pacientes`
 --
 ALTER TABLE `pacientes`
   MODIFY `id_paciente` int(11) NOT NULL AUTO_INCREMENT;
@@ -149,7 +160,7 @@ ALTER TABLE `pacientes`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas

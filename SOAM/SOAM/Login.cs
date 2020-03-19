@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SOAM.Clases;
-using SOAM.Formularios;
+using SOAM.Formularios.Admin;
+using SOAM.Formularios.Doctor;
+using SOAM.Formularios.Recepcionista;
 
 namespace SOAM
 {
@@ -36,9 +38,8 @@ namespace SOAM
             {
                 //admin
                 if (user.Tipo == 1) {
-                    MessageBox.Show("Usted es un admin.");
-                    //FormAdmin.Show();
-                    //this.Hide();
+
+
                 }
 
                 //doctor
@@ -52,9 +53,10 @@ namespace SOAM
                 //recepcionista
                 else
                 {
-                    MessageBox.Show("Usted es una recepcionista.");
-                    //FormRecep.Show();
-                    //this.Hide();
+
+                    IndexRecepcionista frm = new IndexRecepcionista();
+                    frm.Show();
+                    this.Hide();
                 }
 
 
@@ -69,7 +71,7 @@ namespace SOAM
 
         private void lblRecuperar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("neris culero");
+            MessageBox.Show("Recuperacion de cuenta");
             //FormDoctor.Show();
             //this.Hide();
         }

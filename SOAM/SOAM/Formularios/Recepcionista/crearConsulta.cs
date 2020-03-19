@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace SOAM.Formularios.Recepcionista
 {
-    public partial class Form1 : Form
+    public partial class crearConsulta : Form
     {
-        public Form1()
+        public crearConsulta()
         {
             InitializeComponent();
+            this.CenterToScreen();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            IndexRecepcionista frm = new IndexRecepcionista();
+            frm.Show();
+            this.Close();
         }
     }
 }

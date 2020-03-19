@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
@@ -69,7 +69,7 @@ CREATE TABLE `pacientes` (
   `apellidos` varchar(255) NOT NULL,
   `dui` varchar(10) NOT NULL,
   `fecha_nac` date NOT NULL,
-  `pero` double NOT NULL,
+  `peso` double NOT NULL,
   `altura` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

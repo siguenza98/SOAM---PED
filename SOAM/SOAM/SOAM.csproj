@@ -68,8 +68,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Admin.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Consulta.cs" />
+    <Compile Include="Clases\Doctor.cs" />
+    <Compile Include="Clases\Paciente.cs" />
+    <Compile Include="Clases\Recepcionista.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\Recepcionista\crearConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Recepcionista\crearConsulta.Designer.cs">
+      <DependentUpon>crearConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Recepcionista\crearExpediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Recepcionista\crearExpediente.Designer.cs">
+      <DependentUpon>crearExpediente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,16 +105,22 @@
     <Compile Include="Formularios\Doctor\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Recepcionista\Form1.cs">
+    <Compile Include="Formularios\Recepcionista\IndexRecepcionista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Recepcionista\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\Recepcionista\IndexRecepcionista.Designer.cs">
+      <DependentUpon>IndexRecepcionista.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Recepcionista\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Recepcionista\crearConsulta.resx">
+      <DependentUpon>crearConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Recepcionista\crearExpediente.resx">
+      <DependentUpon>crearExpediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Recepcionista\IndexRecepcionista.resx">
+      <DependentUpon>IndexRecepcionista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

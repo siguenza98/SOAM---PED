@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SOAM.Clases
 {
-    class Recepcionista : Usuario
+    public class Recepcionista : Usuario
     {
 
         

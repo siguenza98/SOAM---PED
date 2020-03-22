@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtNombres = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbDep = new System.Windows.Forms.ComboBox();
+            this.txtDUI = new System.Windows.Forms.TextBox();
+            this.cmbPrioridad = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -48,7 +51,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(283, 49);
             this.btnCancelar.TabIndex = 28;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "Regresar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -63,6 +66,7 @@
             this.btnCrear.TabIndex = 27;
             this.btnCrear.Text = "Crear Consulta";
             this.btnCrear.UseVisualStyleBackColor = false;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // label4
             // 
@@ -91,46 +95,52 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "DUI de paciente";
             // 
-            // comboBox1
+            // cmbDep
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(40, 179);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(283, 29);
-            this.comboBox1.TabIndex = 29;
+            this.cmbDep.FormattingEnabled = true;
+            this.cmbDep.Location = new System.Drawing.Point(40, 179);
+            this.cmbDep.Name = "cmbDep";
+            this.cmbDep.Size = new System.Drawing.Size(283, 29);
+            this.cmbDep.TabIndex = 29;
             // 
-            // txtNombres
+            // txtDUI
             // 
-            this.txtNombres.Location = new System.Drawing.Point(40, 50);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(283, 27);
-            this.txtNombres.TabIndex = 16;
+            this.txtDUI.Location = new System.Drawing.Point(40, 50);
+            this.txtDUI.Name = "txtDUI";
+            this.txtDUI.Size = new System.Drawing.Size(283, 27);
+            this.txtDUI.TabIndex = 16;
             // 
-            // comboBox2
+            // cmbPrioridad
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(40, 114);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(283, 29);
-            this.comboBox2.TabIndex = 30;
+            this.cmbPrioridad.FormattingEnabled = true;
+            this.cmbPrioridad.Location = new System.Drawing.Point(40, 114);
+            this.cmbPrioridad.Name = "cmbPrioridad";
+            this.cmbPrioridad.Size = new System.Drawing.Size(283, 29);
+            this.cmbPrioridad.TabIndex = 30;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // crearConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 400);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbPrioridad);
+            this.Controls.Add(this.cmbDep);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNombres);
+            this.Controls.Add(this.txtDUI);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "crearConsulta";
             this.Text = "Crear Consulta";
+            this.Load += new System.EventHandler(this.crearConsulta_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,8 +153,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbDep;
+        private System.Windows.Forms.TextBox txtDUI;
+        private System.Windows.Forms.ComboBox cmbPrioridad;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

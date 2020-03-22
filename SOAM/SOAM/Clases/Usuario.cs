@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SOAM.Clases
 {
-    class Usuario
+    public class Usuario
     {
 
         private int id_usuario;

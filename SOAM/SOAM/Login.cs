@@ -38,8 +38,9 @@ namespace SOAM
             {
                 //admin
                 if (user.Tipo == 1) {
-
-
+                    indexAdmin frm = new indexAdmin();
+                    frm.Show();
+                    this.Hide();
                 }
 
                 //doctor

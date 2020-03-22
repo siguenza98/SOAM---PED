@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnExpediente = new System.Windows.Forms.Button();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.dgvCola = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDespachar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
             this.btnVaciar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCola)).BeginInit();
             this.SuspendLayout();
@@ -52,8 +52,22 @@
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVertical.Location = new System.Drawing.Point(0, 0);
             this.menuVertical.Name = "menuVertical";
-            this.menuVertical.Size = new System.Drawing.Size(220, 551);
+            this.menuVertical.Size = new System.Drawing.Size(220, 552);
             this.menuVertical.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 212);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(220, 59);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Buscar Expediente";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -63,12 +77,13 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Location = new System.Drawing.Point(0, 492);
+            this.btnSalir.Location = new System.Drawing.Point(0, 493);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(220, 59);
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnExpediente
             // 
@@ -81,7 +96,7 @@
             this.btnExpediente.Name = "btnExpediente";
             this.btnExpediente.Size = new System.Drawing.Size(220, 59);
             this.btnExpediente.TabIndex = 1;
-            this.btnExpediente.Text = "Registrar Expediente de Paciente";
+            this.btnExpediente.Text = "Registrar Expediente";
             this.btnExpediente.UseVisualStyleBackColor = true;
             this.btnExpediente.Click += new System.EventHandler(this.btnExpediente_Click);
             // 
@@ -132,20 +147,6 @@
             this.btnDespachar.UseVisualStyleBackColor = false;
             this.btnDespachar.Click += new System.EventHandler(this.btnDespachar_Click);
             // 
-            // btnRemover
-            // 
-            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.btnRemover.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Location = new System.Drawing.Point(453, 483);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(179, 56);
-            this.btnRemover.TabIndex = 7;
-            this.btnRemover.Text = "Remover Siguiente Paciente";
-            this.btnRemover.UseVisualStyleBackColor = false;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
             // btnVaciar
             // 
             this.btnVaciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
@@ -160,28 +161,28 @@
             this.btnVaciar.UseVisualStyleBackColor = false;
             this.btnVaciar.Click += new System.EventHandler(this.btnVaciar_Click);
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(220, 59);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Buscar Expediente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(755, 46);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(164, 30);
+            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.Text = "Actualizar Cola";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // IndexRecepcionista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(964, 551);
+            this.ClientSize = new System.Drawing.Size(964, 552);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnVaciar);
-            this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnDespachar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvCola);
@@ -206,8 +207,8 @@
         private System.Windows.Forms.DataGridView dgvCola;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDespachar;
-        private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnVaciar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

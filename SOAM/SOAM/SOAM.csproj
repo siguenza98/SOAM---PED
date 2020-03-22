@@ -75,6 +75,30 @@
     <Compile Include="Clases\Paciente.cs" />
     <Compile Include="Clases\Recepcionista.cs" />
     <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="Formularios\Admin\indexAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Admin\indexAdmin.Designer.cs">
+      <DependentUpon>indexAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Admin\Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Admin\Departamentos.Designer.cs">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Admin\Doctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Admin\Doctores.Designer.cs">
+      <DependentUpon>Doctores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Admin\Recepcionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Admin\Recepcionista.Designer.cs">
+      <DependentUpon>Recepcionista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Recepcionista\crearConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +110,12 @@
     </Compile>
     <Compile Include="Formularios\Recepcionista\crearExpediente.Designer.cs">
       <DependentUpon>crearExpediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Recepcionista\verPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Recepcionista\verPacientes.Designer.cs">
+      <DependentUpon>verPacientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -113,6 +143,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Admin\indexAdmin.resx">
+      <DependentUpon>indexAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Admin\Departamentos.resx">
+      <DependentUpon>Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Admin\Doctores.resx">
+      <DependentUpon>Doctores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Admin\Recepcionista.resx">
+      <DependentUpon>Recepcionista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Recepcionista\crearConsulta.resx">
       <DependentUpon>crearConsulta.cs</DependentUpon>
     </EmbeddedResource>

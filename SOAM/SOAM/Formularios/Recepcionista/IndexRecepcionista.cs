@@ -13,7 +13,8 @@ namespace SOAM.Formularios.Recepcionista
 {
     public partial class IndexRecepcionista : Form
     {
-        Queue<Paciente> cola = new Queue<Paciente>();
+        //la cola de espera de la recepcionista
+        public Queue<Consulta> cola = new Queue<Consulta>();
         
 
         public IndexRecepcionista()
@@ -24,9 +25,7 @@ namespace SOAM.Formularios.Recepcionista
         private void IndexRecepcionista_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            Paciente p = new Paciente();
-            p.Nombre = "Nombre";
-            cola.Enqueue(p);
+           
             actualizarTabla();
         }
 
@@ -40,6 +39,7 @@ namespace SOAM.Formularios.Recepcionista
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             crearConsulta frm = new crearConsulta();
+            frm.cola = cola;
             this.Hide();
             frm.Show();
         }
@@ -53,17 +53,26 @@ namespace SOAM.Formularios.Recepcionista
 
         private void btnDespachar_Click(object sender, EventArgs e)
         {
-            cola.Dequeue();
+           Consulta consultaDespachada =  cola.Dequeue();
+            actualizarTabla();
         }
 
-        private void btnRemover_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnVaciar_Click(object sender, EventArgs e)
         {
+            cola.Clear();
+            actualizarTabla();
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close(); ;
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            actualizarTabla();
         }
     }
 }

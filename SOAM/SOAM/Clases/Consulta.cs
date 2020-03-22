@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SOAM.Clases
 {
-    class Consulta
+    public class Consulta
     {
         private int id_consulta;
         private DateTime fecha_realizacion;
@@ -14,6 +14,7 @@ namespace SOAM.Clases
         private string descripcion;
         private Paciente id_paciente;
         private Recepcionista id_usuario;
+        private string departamento;
 
         public int Id_consulta { get { return id_consulta; } set {  id_consulta = value; } }
         public DateTime Fecha_realizacion { get  { return fecha_realizacion; } set { fecha_realizacion = value; } }
@@ -21,6 +22,7 @@ namespace SOAM.Clases
         public string Descripcion { get { return descripcion; } set { descripcion = value; } }
         public Paciente Id_paciente { get { return id_paciente; } set { id_paciente = value; } }
         public Recepcionista Id_usuario { get { return id_usuario; } set { id_usuario = value; } }
+        public string Departamento { get { return departamento; } set { departamento = value; } }
 
         public bool agregarConsulta(Consulta consulta)
         {
